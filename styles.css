@@ -1,0 +1,288 @@
+
+
+.team {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+.member {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 15px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.member:hover {
+  transform: translateY(-5px);
+}
+
+.member img {
+  border-radius: 10%;
+  width: 20px;
+  height: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.member h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.member p {
+  font-size: 14px;
+  color: #eee;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .team {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member {
+    width: 80%;
+  }
+}
+
+    :root {
+      --bg-color: #f4f4f4;
+      --user-color: #007bff;
+      --bot-color: #e0f7da;
+      --text-color: #333;
+      --font: 'Inter', sans-serif;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --user-color: #2196F3;
+      --bot-color: #37474F;
+      --text-color: #fff;
+    }
+
+    body {
+      font-family: var(--font);
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+      background: url('https://static.vecteezy.com/system/resources/previews/042/960/123/non_2x/ai-generated-gamepad-in-the-hands-of-a-gamer-on-a-technological-background-neon-lighting-video-games-online-with-friends-winnings-prizes-fun-entertainment-youth-culture-virtual-reality-photo.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #333;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark .container {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    h2 {
+      text-align: center;
+    }
+    .controls, .shortcuts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    input[type="text"], select, button {
+      font-size: 1rem;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    
+    #chatbox {
+      border: 1px solid #000000;
+      padding: 1rem;
+      height: 400px;
+      overflow-y: auto;
+      background-color: #ebdddd;
+      border-radius: 8px;
+    }
+
+    body.dark #chatbox {
+      background-color: #1e1e1e;
+    }
+
+    .chat-entry {
+      display: flex;
+      margin: 10px 0;
+      align-items: flex-start;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .chat-entry.user {
+      flex-direction: row-reverse;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+
+    .bubble {
+      padding: 10px 15px;
+      border-radius: 18px;
+      line-height: 1.4;
+      max-width: 75%;
+      word-wrap: break-word;
+      background-color: var(--bot-color);
+      color: var(--text-color);
+    }
+
+    .user .bubble {
+      background-color: var(--user-color);
+      color: white;
+    }
+
+    
+
+    .typing-indicator {
+      display: inline-block;
+      position: relative;
+      width: 40px;
+      height: 20px;
+    }
+
+    .typing-indicator span {
+      background-color: #ccc;
+      border-radius: 50%;
+      display: inline-block;
+      height: 8px;
+      width: 8px;
+      margin: 0 2px;
+      animation: typing 1.4s infinite ease-in-out;
+    }
+
+    .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes typing {
+      0%, 80%, 100% { transform: scale(0); }
+      40% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 60%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 14px;
+      font-size: 16px;
+      margin: 10px 5px 0 0;
+      border-radius: 6px;
+      border: none;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #071520;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    select {
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    #about, #contact {
+      background: linear-gradient(to right, #83adb9, #668d96);
+      color: white;
+      padding: 50px 30px;
+      text-align: center;
+      margin-top: 40px;
+      border-radius: 12px;
+    }
+
+    #about h2, #contact h2 {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: 90%;
+        padding: 15px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+      }
+
+      .controls {
+        flex-direction: column;
+      }
+    }
+    #chat-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center the entire chat content */
+    }
+    
+    .chat-entry {
+      display: flex;
+      width: 100%;
+      max-width: 90%; /* Limits the width of chat bubbles */
+      justify-content: flex-start;
+      margin: 10px 0;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    
+    .chat-entry.user {
+      justify-content: flex-end;
+    }
+    

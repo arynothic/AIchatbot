@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI E-Sport Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="relative font-sans h-screen flex items-center justify-center">
+    <div class="w-full max-w-2xl bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="bg-indigo-700 p-6 rounded-t-2xl text-white">
+            <h1 class="text-4xl font-bold text-center">Chat with Ai E-Sports Coach</h1>
+        </div>
+
+        <div id="chat-container" class="p-6 space-y-6 h-96 overflow-y-auto bg-gray-50 rounded-b-2xl shadow-inner">
+            <!-- Chat messages will be inserted here -->
+        </div>
+
+        <div class="p-6 bg-white flex items-center border-t-2 border-gray-200 rounded-b-2xl">
+            <input type="text" id="user-input" placeholder="Ask me anything about E-sport gaming..." class="flex-1 p-3 rounded-l-xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-700" />
+            <button id="send-btn" class="ml-4 bg-indigo-500 text-white px-4 py-2 rounded-xl hover:bg-indigo-600 transition ease-in-out duration-300">
+                Send
+            </button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
